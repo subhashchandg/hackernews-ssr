@@ -14,6 +14,7 @@ const Posts = (props)=>{
 
 return(
     <table className='posts' cellSpacing='0'>
+        <caption className='ada_hidden'>Hacker news page {pageNumber}</caption>
         <thead>
         <th>Comments</th>
         <th>Vote Count</th>
@@ -45,6 +46,12 @@ return(
         </tfoot>
         <style jsx>
             {`
+            .ada_hidden{position:absolute;
+                left:-10000px;
+                top:auto;
+                width:1px;
+                height:1px;
+                overflow:hidden;}
             .posts{
                 list-style-type: decimal;
                 padding:0 10px;
