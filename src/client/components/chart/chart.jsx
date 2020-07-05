@@ -1,6 +1,5 @@
 import {Line} from 'react-chartjs-2';
 import React, { memo } from 'react';
-import './chart.scss';
 
 const Chart=(props)=>{
     const {posts } = props;
@@ -34,6 +33,12 @@ const Chart=(props)=>{
           }
         }}
       />
+      <style jsx>
+        {`
+        .chart{
+          border-top: 2px solid orange;
+      }`}
+      </style>
     </div>);
 }
 

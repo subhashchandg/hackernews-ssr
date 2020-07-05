@@ -14,13 +14,17 @@ const PostsContainer =()=>{
 
     const [posts,setPosts] = useState([]);
 
+    const updateUpvoteCount=(postID)=>{
+     setPosts(posts.map(post=> post.objectID === postID ? {...post, points: post.points + 1}: post));
+    }
+
     useEffect(()=>{
         upDateState(1,setPosts);
     },[])
 
     return (
         <Fragment>
-        <Posts posts={posts} upDateState={upDateState} setPosts={setPosts}/>
+        <Posts posts={posts} upDateState={upDateState} setPosts={setPosts} updateUpvoteCount={updateUpvoteCount}/>
         <Chart posts={posts}/>
         </Fragment>
     );

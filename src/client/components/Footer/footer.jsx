@@ -1,5 +1,4 @@
 import React,{ memo } from "react";
-import './footer.scss';
 
 const Header = (props)=>{
     return(
@@ -19,6 +18,33 @@ const Header = (props)=>{
             <label htmlFor="searchBox"className='searchLabel'>Search: </label>
             <input type='text' id='searchBox'/>
            </div>
+           <style jsx>
+               {`
+               .footer{
+                display:flex;
+                flex-direction: column;
+                font-size:10px;
+                justify-content: center;
+                align-items: center;
+                padding-bottom:25px;
+                border-top: 2px solid orange;
+            }
+            .navigation{
+                display:flex;
+            }
+            .navigation li{
+                list-style-type: none;
+            }
+            .navigation li a{
+                border-right:1px solid black;
+                padding: 0 5px;
+            }
+            .searchLabel{
+                font-size: 13px;
+                font-size: 10pt;
+                color: #828282;;
+            }`}
+           </style>
         </footer>
     );
 
