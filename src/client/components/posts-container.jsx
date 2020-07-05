@@ -4,7 +4,7 @@ import Posts from './posts/posts';
 import Chart from './chart/chart'
 
 const upDateState= (pageNumber,setPostsCb)=>{
-    axios.get(`http://hn.algolia.com/api/v1/search?page=${pageNumber}`)
+    axios.get(`https://hn.algolia.com/api/v1/search?page=${pageNumber}`)
     .then(response=>{
         setPostsCb(response.data.hits);
     })
