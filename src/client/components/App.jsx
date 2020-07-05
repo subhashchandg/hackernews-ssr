@@ -1,17 +1,17 @@
-import React, { Fragment } from 'react';
-import Button from './button'
+import React from 'react';
+import Header from './Header/Header';
+import Footer from './Footer/footer';
+import './App.scss'
+import PostsContainer from './posts-container';
 
-const App = props=>{
-
-    const handleClick = ()=>{
-        console.log("I work");
-    }
-    return (
-        <Fragment>
-            <h1>Hello World!!!!</h1>
-            <Button handleClick={handleClick} />
-        </Fragment>
-    )
+function App() {
+  return (
+    <div className="App">
+      <Header/>
+      <PostsContainer/>
+      <Footer/> 
+    </div>
+  );
 }
 
 export default App;

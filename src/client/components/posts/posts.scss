@@ -1,0 +1,27 @@
+.posts{
+    list-style-type: decimal;
+    padding:0 10px;
+    background-color: #f6f6ef;
+    thead{
+        background-color: #ff6600;
+        color: white;
+    }
+    tfoot{
+        text-align: right;
+        a{
+            color: #ff6600;
+        }
+    }
+    .orange{
+        color: #ff6600; 
+    }
+    .indianred{
+        color:indianred;
+    }
+    .smallText{
+        .domain{
+            color: grey;
+            font-size:12px; 
+        }
+    }
+}
