@@ -31,6 +31,7 @@ return(
             <a href={post.url}>{post.title || 'No Title Available'}</a>
             <span className='smallText'> <a href={post.url} className='domain'>({getDomainName(post.url)})</a> by <a>{post.author}</a> </span>
              <span className='smallText'> {getDateDifferenceInHours(post.created_at)} hours ago </span>
+             <span className='hide' onClick={({target})=> target.closest('tr').remove()}>[hide]</span>
             </td>
             </tr>
         ))}
@@ -46,6 +47,9 @@ return(
         </tfoot>
         <style jsx>
             {`
+            .hide{
+                cursor:pointer;
+            }
             .ada_hidden{position:absolute;
                 left:-10000px;
                 top:auto;
